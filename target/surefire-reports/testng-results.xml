@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-22T22:36:19 IST" name="Suite" finished-at="2024-09-22T22:36:33 IST" duration-ms="14194">
+    <groups>
+      <group name="regression">
+        <method signature="addCartNotification.addCartData()[pri:0, instance:Suite1.addCartNotification@460d0a57]" name="addCartData" class="Suite1.addCartNotification"/>
+      </group> <!-- regression -->
+    </groups>
+    <test started-at="2024-09-22T22:36:19 IST" name="Test" finished-at="2024-09-22T22:36:33 IST" duration-ms="14194">
+      <class name="Suite1.addCartNotification">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Suite1.addCartNotification@460d0a57]" started-at="2024-09-22T22:36:19 IST" name="beforeTest" finished-at="2024-09-22T22:36:32 IST" duration-ms="13091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="addCartData()[pri:0, instance:Suite1.addCartNotification@460d0a57]" started-at="2024-09-22T22:36:32 IST" name="addCartData" finished-at="2024-09-22T22:36:33 IST" duration-ms="992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCartData -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Suite1.addCartNotification@460d0a57]" started-at="2024-09-22T22:36:33 IST" name="afterTest" finished-at="2024-09-22T22:36:33 IST" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Suite1.addCartNotification -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+  <suite started-at="2024-09-22T22:36:33 IST" name="Suite (0)" finished-at="2024-09-22T22:36:46 IST" duration-ms="13016">
+    <groups>
+      <group name="sanity">
+        <method signature="LoginLogoutTestCase.LoginPageSuccess()[pri:0, instance:Suite1.LoginLogoutTestCase@31d7b7bf]" name="LoginPageSuccess" class="Suite1.LoginLogoutTestCase"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2024-09-22T22:36:33 IST" name="Test" finished-at="2024-09-22T22:36:46 IST" duration-ms="13016">
+      <class name="Suite1.LoginLogoutTestCase">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Suite1.LoginLogoutTestCase@31d7b7bf]" started-at="2024-09-22T22:36:33 IST" name="beforeTest" finished-at="2024-09-22T22:36:45 IST" duration-ms="12133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="LoginPageSuccess()[pri:0, instance:Suite1.LoginLogoutTestCase@31d7b7bf]" started-at="2024-09-22T22:36:45 IST" name="LoginPageSuccess" finished-at="2024-09-22T22:36:46 IST" duration-ms="789" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPageSuccess -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Suite1.LoginLogoutTestCase@31d7b7bf]" started-at="2024-09-22T22:36:46 IST" name="afterTest" finished-at="2024-09-22T22:36:46 IST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Suite1.LoginLogoutTestCase -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite (0) -->
+  <suite started-at="2024-09-22T22:36:46 IST" name="Selenium All Tests " finished-at="2024-09-22T22:36:46 IST" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Selenium All Tests  -->
+</testng-results>
