@@ -19,7 +19,7 @@ public class CartPage extends BasePage {
     private WebElement continueShopping;
 
 
-    CartPage(WebDriver d) {
+    public CartPage(WebDriver d) {
         this.driver = d;
         PageFactory.initElements(driver, this);
     }

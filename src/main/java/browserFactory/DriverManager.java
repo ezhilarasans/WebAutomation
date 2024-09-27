@@ -10,7 +10,7 @@ public abstract class DriverManager {
 
     protected abstract void createDriver();
 
-    public void quitDriver() {
+    public static void quitDriver() {
         if (driver != null) {
             driver.get().quit();
             driver.set(null);
