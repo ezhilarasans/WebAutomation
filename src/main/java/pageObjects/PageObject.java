@@ -16,42 +16,25 @@ public class PageObject {
     private static LoginPage loginpage = null;
     private static CartPage cartpage = null;
     private static NavigationPage navpage = null;
-    private static WebDriver driver = null;
-    static DriverManager driverManger;
 
-    public static HomePage getHomePage() {
+    public static HomePage getHomePage(WebDriver driver) {
         homepage = (homepage == null) ? new HomePage(driver) : homepage;
         return homepage;
     }
 
-    public static CartPage getCartPage() {
+    public static CartPage getCartPage(WebDriver driver) {
         cartpage = (cartpage == null) ? new CartPage(driver) : cartpage;
         return cartpage;
     }
 
-    public static LoginPage getLoginPage() {
+    public static LoginPage getLoginPage(WebDriver driver) {
         loginpage = (loginpage == null) ? new LoginPage(driver) : loginpage;
         return loginpage;
     }
 
-    public static NavigationPage getNavigationPage() {
+    public static NavigationPage getNavigationPage(WebDriver driver) {
         navpage = (navpage == null) ? new NavigationPage(driver) : navpage;
         return navpage;
-    }
-
-    public static WebDriver getDriver(DriverType browser) throws IOException {
-        if (driver == null) {
-            driverManger = DriverManagerFactory.getManger(browser);
-            driver = driverManger.getDriver();
-        }
-        return driver;
-    }
-
-    public static void quitDriver() {
-        {
-            driverManger.quitDriver();
-            driver=null;
-        }
     }
 
 }

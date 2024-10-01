@@ -5,12 +5,14 @@ import browserFactory.DriverManagerFactory;
 import browserFactory.DriverType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import elementPojo.HomeScreenElements;
+import hooks.Hooks;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import pageObjects.PageObject;
 import pages.HomePage;
@@ -25,8 +27,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class stepsDefinition {
-    DriverManager driverManger;
-    public static WebDriver driver;
+    WebDriver driver=null;
     LoginPage login=null;
     HomePage homepage=null;
 
@@ -40,11 +41,11 @@ public class stepsDefinition {
         return new ObjectMapper().convertValue(map,HomeScreenElements.class);
     }
 
-    @Given("I open the Application in {getDriverType} browser")
-    public void openApplication(DriverType browser) throws IOException, InterruptedException {
-        driver = PageObject.getDriver(browser);
-        login = PageObject.getLoginPage();
-        homepage = PageObject.getHomePage();
+    @Given("I open the Application")
+    public void openApplication() throws IOException, InterruptedException {
+        driver= Hooks.getDriver();
+        login = PageObject.getLoginPage(driver);
+        homepage =PageObject.getHomePage(driver);
         driver.get("https://www.saucedemo.com");
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
     }

@@ -1,13 +1,12 @@
 package testRunner;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "src//test//java//Features", glue = {"steps", "hooks"})
+@CucumberOptions(features = "src//test//resources", glue = {"steps", "hooks"},
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+
 public class testRunner extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = true)
     public Object[][] scenarios() {
